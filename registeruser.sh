@@ -32,3 +32,11 @@ echo "PASS"
 else 
 echo "FAIL"
 fi
+echo "Enter the Password"
+read word
+pat='^[A-Za-z0-9]{8,}$'
+if [[ $word =~ $pat ]]; then
+echo "PASS"
+else 
+echo "FAIL"
+fi
