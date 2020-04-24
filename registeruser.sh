@@ -24,3 +24,11 @@ echo "PASS"
 else 
 echo "FAIL"
 fi
+echo "Enter Mobile Number"
+read word
+pat='^((\+)?91|0)?[6-9][0-9]{9}$'
+if [[ $word =~ $pat ]]; then
+echo "PASS"
+else 
+echo "FAIL"
+fi
