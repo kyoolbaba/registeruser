@@ -18,7 +18,7 @@ echo "FAIL"
 fi
 echo "Enter EmailId"
 read word
-pat='^[a-zA-Z0-9]+([.-_+])?[a-zA-Z0-9]*@[a-zA-Z]+.[a-z]{3,4}(.[a-z]{2})?$'
+pat='^[a-zA-Z0-9]+([.-_+])?[a-zA-Z0-9]*@[a-zA-Z]+.[a-z]{2,4}(.[a-z]{2})?$'
 if [[ $word =~ $pat ]]; then
 echo "PASS"
 else 
@@ -34,8 +34,8 @@ echo "FAIL"
 fi
 echo "Enter the Password"
 read word
-pat='^[A-Za-z0-9]{8,}$'
-if [[ $word =~ $pat ]]; then
+pat='[A-Z]+'
+if [[ $word =~ $pat && ${#word} -gt '7' ]]; then
 echo "PASS"
 else 
 echo "FAIL"
