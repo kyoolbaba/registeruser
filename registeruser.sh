@@ -36,7 +36,8 @@ echo "Enter the Password"
 read word
 pat1='[A-Z]+'
 pat2='[0-9]+'
-if [[ $word =~ $pat1 && ${#word} -gt '7' && $word =~ $pat2 ]]; then
+pat3='[^a-zA-Z0-9]+'
+if [[ $word =~ $pat1 && ${#word} -gt '7' && $word =~ $pat2 && $word =~ $pat3 ]]; then
 echo "PASS"
 else 
 echo "FAIL"
