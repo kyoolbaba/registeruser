@@ -34,8 +34,9 @@ echo "FAIL"
 fi
 echo "Enter the Password"
 read word
-pat='[A-Z]+'
-if [[ $word =~ $pat && ${#word} -gt '7' ]]; then
+pat1='[A-Z]+'
+pat2='[0-9]+'
+if [[ $word =~ $pat1 && ${#word} -gt '7' && $word =~ $pat2 ]]; then
 echo "PASS"
 else 
 echo "FAIL"
